@@ -1,4 +1,4 @@
-import LoginScreen from "./LoginScreen/LoginScreen";
+import LoginScreen from "./Screen/LoginScreen/LoginScreen";
 
 function App() {
   return (

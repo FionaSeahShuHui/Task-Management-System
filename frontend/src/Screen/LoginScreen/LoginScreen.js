@@ -40,7 +40,11 @@ function LoginScreen() {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <h1 style={{ margin: "20px" }}>Task Management System</h1>
+        <h1
+          style={{ marginLeft: "30px", marginRight: "30px", marginTop: "30px" }}
+        >
+          Task Management System
+        </h1>
         <form onSubmit={LoginButton}>
           <div
             style={{
@@ -105,8 +109,8 @@ function LoginScreen() {
                 alignItems: "center",
                 marginLeft: "20px",
                 marginRight: "20px",
-                marginTop: "20px",
-                marginBottom: "40px",
+                marginTop: "30px",
+                marginBottom: "30px",
               }}
             >
               <Button
