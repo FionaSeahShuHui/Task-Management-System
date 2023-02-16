@@ -5,7 +5,17 @@ function HomeScreen() {
   return (
     <div>
       <NavigationBar />
-      Welcome Name
+      <h1
+        style={{
+          justifyContent: "center",
+          textAlign: "center",
+          marginTop: "150px",
+          lineHeight: "70px",
+        }}
+      >
+        Welcome, <br />
+        username
+      </h1>
     </div>
   );
 }
