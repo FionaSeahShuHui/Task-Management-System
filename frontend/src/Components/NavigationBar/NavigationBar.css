@@ -61,6 +61,7 @@ nav {
     align-items: left;
     gap: 30px;
     justify-content: center;
+    z-index: 2;
     background-color: white;
     transition: 1s;
     transform: translateY(-100vh);

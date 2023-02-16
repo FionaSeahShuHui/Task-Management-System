@@ -1,10 +1,11 @@
 import NavigationBar from "../../Components/NavigationBar/NavigationBar";
+import Container from "@mui/material/Container";
 
 function HomeScreen() {
   return (
     <div>
       <NavigationBar />
-      <h1>Heoll</h1>
+      Welcome Name
     </div>
   );
 }
