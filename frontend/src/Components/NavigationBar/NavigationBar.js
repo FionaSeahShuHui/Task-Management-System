@@ -4,8 +4,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ViewColumnIcon from "@mui/icons-material/ViewColumn";
-
+import LogoutIcon from "@mui/icons-material/Logout";
 import "./NavigationBar.css";
+import { Button } from "@mui/material";
 
 function NavigationBar() {
   const navRef = useRef();
@@ -27,7 +28,7 @@ function NavigationBar() {
             <ViewColumnIcon sx={{ m: -0.5, marginRight: "10px" }} />
             Kanban Board
           </a>
-          <a href="/home">
+          <a href="/settings">
             <SettingsIcon sx={{ m: -0.5, marginRight: "10px" }} />
             Settings
           </a>
@@ -35,6 +36,10 @@ function NavigationBar() {
             <CloseIcon />
           </button>
         </nav>
+        <Button variant="outlined" startIcon=<LogoutIcon />>
+          {" "}
+          Log Out
+        </Button>
         <button className="nav-btn" onClick={showNavBar}>
           <MenuIcon />
         </button>
