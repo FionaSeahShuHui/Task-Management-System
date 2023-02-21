@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { Modal } from "@mui/material";
 import { useState } from "react";
 import UpdatePasswordScreen from "./UpdatePassword";
+import UpdateEmailScreen from "./UpdateEmail";
 
 const style = {
   position: "absolute",
@@ -20,9 +21,14 @@ const style = {
 };
 
 function SettingsScreen() {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [openChangePassword, setOpenChangePassword] = useState(false);
+  const handleOpenPassword = () => setOpenChangePassword(true);
+  const handleClosePassword = () => setOpenChangePassword(false);
+
+  const [openEmail, setOpenEmail] = useState(false);
+  const handleOpenEmail = () => setOpenEmail(true);
+  const handleCloseEmail = () => setOpenEmail(false);
+
   return (
     <div>
       <NavigationBar />
@@ -37,16 +43,20 @@ function SettingsScreen() {
         />
         <div style={{ marginTop: "20px" }}>
           <Stack direction="row" spacing={2}>
-            <Button variant="contained">
+            <Button variant="contained" onClick={handleOpenEmail}>
               <EmailIcon style={{ marginRight: "10px" }} />
               Update Email
             </Button>
-
-            <Button variant="contained" onClick={handleOpen}>
+            <Modal open={openEmail} onClose={handleCloseEmail}>
+              <Box sx={style}>
+                <UpdateEmailScreen />
+              </Box>
+            </Modal>
+            <Button variant="contained" onClick={handleOpenPassword}>
               <LockIcon style={{ marginRight: "10px" }} />
               Update Password
             </Button>
-            <Modal open={open} onClose={handleClose}>
+            <Modal open={openChangePassword} onClose={handleClosePassword}>
               <Box sx={style}>
                 <UpdatePasswordScreen />
               </Box>

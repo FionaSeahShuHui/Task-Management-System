@@ -7,11 +7,9 @@ import {
   InputAdornment,
   IconButton,
   Button,
-  Stack,
 } from "@mui/material";
 import { Key, Visibility, VisibilityOff } from "@mui/icons-material";
 import EnhancedEncryptionIcon from "@mui/icons-material/EnhancedEncryption";
-import CancelIcon from "@mui/icons-material/Cancel";
 
 function UpdatePasswordScreen() {
   const [showOldPassword, setShowOldPassword] = useState(false);
@@ -30,7 +28,7 @@ function UpdatePasswordScreen() {
 
   return (
     <div>
-      <h2 style={{ textAlign: "center" }}>Change Password</h2>
+      <h2 style={{ textAlign: "center" }}>Update Password</h2>
       <hr style={{ marginTop: "20px" }}></hr>
       <form onSubmit={changePasswordButton}>
         {/* Old Password */}
@@ -44,7 +42,10 @@ function UpdatePasswordScreen() {
           }}
         >
           <Key sx={{ color: "action.active", mr: 1, my: 2 }} />
-          <FormControl sx={{ m: 0, width: "100%" }} variant="outlined">
+          <FormControl
+            sx={{ m: 0, width: "100%" }}
+            variant="outlined"
+          >
             <InputLabel>Old Password</InputLabel>
             <OutlinedInput
               id="passwordField"
