@@ -1,5 +1,4 @@
 import * as React from "react";
-// import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -22,8 +21,6 @@ function LoginScreen() {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  //   const navigate = useNavigate();
 
   function LoginButton() {
     alert("Login Buttton Pressed. ");
